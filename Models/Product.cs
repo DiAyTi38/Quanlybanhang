@@ -39,6 +39,13 @@ namespace Quanlybanhang.Models
             set { _description = value; OnPropertyChanged(); }
         }
 
+        private string _status = "Còn hàng"; // Trạng thái: Còn hàng, Đã bán
+        public string Status
+        {
+            get => _status;
+            set { _status = value; OnPropertyChanged(); }
+        }
+
         // Tình trạng hiển thị trên UI
         public string Condition => IsNew ? "Mới 100%" : "Đã qua sử dụng (Secondhand)";
     }
