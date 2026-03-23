@@ -1,8 +1,5 @@
 <Application x:Class="Quanlybanhang.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Views/MainWindow.xaml">
-    <Application.Resources>
-        <!-- Thêm các Style DataGrid/Button tùy chỉnh sau -->
-    </Application.Resources>
+             StartupUri="Views/LoginView.xaml">
 </Application>

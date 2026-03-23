@@ -1,0 +1,73 @@
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Quanlybanhang.exe
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Quanlybanhang.deps.json
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Quanlybanhang.runtimeconfig.json
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Quanlybanhang.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Quanlybanhang.pdb
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Azure.Core.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Azure.Identity.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.Identity.Client.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Abstractions.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Logging.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.IdentityModel.Tokens.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\Microsoft.SqlServer.Server.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\System.IdentityModel.Tokens.Jwt.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\System.Memory.Data.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\System.Runtime.Caching.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+F:\dowload\hhhhh\hhhhh\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.csproj.AssemblyReference.cache
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\KhachHangView.baml
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\LoginView.baml
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\KhachHangView.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\ThongKeView.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\App.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang_MarkupCompile.cache
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang_MarkupCompile.lref
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\MainWindow.baml
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\ThongKeView.baml
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.g.resources
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.GeneratedMSBuildEditorConfig.editorconfig
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.AssemblyInfoInputs.cache
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.AssemblyInfo.cs
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.csproj.CoreCompileInputs.cache
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.sourcelink.json
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlyba.B0670C86.Up2Date
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.dll
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\refint\Quanlybanhang.dll
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.pdb
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.genruntimeconfig.cache
+F:\dowload\hhhhh\hhhhh\obj\Debug\net8.0-windows\ref\Quanlybanhang.dll
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.csproj.AssemblyReference.cache
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\KhachHangView.baml
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\LoginView.baml
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\KhachHangView.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Views\ThongKeView.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\App.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang_MarkupCompile.cache
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang_MarkupCompile.lref
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.dll
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\refint\Quanlybanhang.dll
+D:\New folder (3)\hhhhh\hhhhh\obj\Debug\net8.0-windows\Quanlybanhang.pdb

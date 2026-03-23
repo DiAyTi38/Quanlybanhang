@@ -2,16 +2,25 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:viewModels="clr-namespace:Quanlybanhang.ViewModels"
+        xmlns:views="clr-namespace:Quanlybanhang.Views"
         Title="Quản Lý Đồ Secondhand (MVVM)" Height="600" Width="900"
         WindowStartupLocation="CenterScreen">
-    
+
     <!-- Liên kết Giao diện này tới ViewModel của nó -->
     <Window.DataContext>
         <viewModels:MainViewModel />
     </Window.DataContext>
 
-    <!-- Nền App và bố cục chia 2 cột -->
-    <Grid Background="#f0f2f5">
+    <DockPanel LastChildFill="True">
+        <!-- Toolbar: restore product and customer buttons and keep thống kê -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+            <Button Content="Quản lý Sản phẩm" Margin="0,0,10,0" Padding="8,4" Click="ShowProducts_Click" />
+            <Button Content="Quản lý Khách hàng" Margin="0,0,10,0" Padding="8,4" Click="ShowKhachHang_Click" />
+            <Button Content="Thống kê doanh thu" Padding="8,4" Click="ShowThongKe_Click" />
+        </StackPanel>
+
+        <!-- Nền App và bố cục chia 2 cột -->
+        <Grid x:Name="ProductsGrid" Background="#f0f2f5">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300" /> <!-- Cột bên trái: Thêm sản phẩm -->
             <ColumnDefinition Width="*" />   <!-- Cột bên phải: Danh sách -->
@@ -96,5 +105,8 @@
                 </DataGrid>
             </Border>
         </Grid>
+        <!-- Thống kê sẽ mở trong cửa sổ riêng -->
+
     </Grid>
+    </DockPanel>
 </Window>

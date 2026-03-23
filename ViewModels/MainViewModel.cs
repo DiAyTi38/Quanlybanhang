@@ -68,13 +68,23 @@ namespace Quanlybanhang.ViewModels
 
         public MainViewModel()
         {
-            // Khởi tạo danh sách mẫu
-            _allProducts = new ObservableCollection<Product>
+            // Try to load from database via DAO
+            try
             {
-                new Product { Id = "SH01", Name = "Áo khoác da Vintage", Price = 350000, IsNew = false },
-                new Product { Id = "SH02", Name = "Giày thể thao Nike Air (Like New)", Price = 800000, IsNew = false },
-                new Product { Id = "NEW01", Name = "Áo thun Local Brand (Nguyên tag)", Price = 250000, IsNew = true }
-            };
+                var dao = new Quanlybanhang.DAO.ProductDAO();
+                var list = dao.GetAllProducts();
+                _allProducts = new ObservableCollection<Product>(list);
+            }
+            catch
+            {
+                // Fallback sample data
+                _allProducts = new ObservableCollection<Product>
+                {
+                    new Product { Id = "SH01", Name = "Áo khoác da Vintage", Price = 350000, IsNew = false },
+                    new Product { Id = "SH02", Name = "Giày thể thao Nike Air (Like New)", Price = 800000, IsNew = false },
+                    new Product { Id = "NEW01", Name = "Áo thun Local Brand (Nguyên tag)", Price = 250000, IsNew = true }
+                };
+            }
 
             _products = new ObservableCollection<Product>(_allProducts);
 
@@ -91,24 +101,39 @@ namespace Quanlybanhang.ViewModels
 
         private void AddProduct()
         {
-            // Tạo sản phẩm mới từ dữ liệu người dùng nhập
-            var newProd = new Product
+            try
             {
-                Id = NewId,
-                Name = NewName,
-                Price = NewPrice,
-                IsNew = NewIsNew
-            };
+                var newProd = new Product
+                {
+                    Id = NewId,
+                    Name = NewName,
+                    Price = NewPrice,
+                    IsNew = NewIsNew,
+                    Description = "",
+                    Status = "Còn hàng"
+                };
 
-            // Thêm vào danh sách
-            _allProducts.Add(newProd);
-            SearchProducts(); // Cập nhật lại list hiển thị
+                var dao = new Quanlybanhang.DAO.ProductDAO();
 
-            // Reset form
-            NewId = string.Empty;
-            NewName = string.Empty;
-            NewPrice = 0;
-            NewIsNew = false;
+                bool result = dao.AddProduct(newProd);
+
+                if (!result) return;
+
+                // reload lại từ database (quan trọng)
+                var list = dao.GetAllProducts();
+                _allProducts = new ObservableCollection<Product>(list);
+                Products = new ObservableCollection<Product>(_allProducts);
+
+                // reset form
+                NewId = string.Empty;
+                NewName = string.Empty;
+                NewPrice = 0;
+                NewIsNew = false;
+            }
+            catch (Exception ex)
+            {
+                System.Windows.MessageBox.Show("Lỗi: " + ex.Message);
+            }
         }
 
         private void DeleteProduct(Product product)
