@@ -140,8 +140,18 @@ namespace Quanlybanhang.ViewModels
         {
             if (product != null)
             {
-                _allProducts.Remove(product);
-                SearchProducts(); // Cập nhật lại list hiển thị
+                var dao = new Quanlybanhang.DAO.ProductDAO();
+                bool deleted = dao.DeleteProduct(product.Id);
+                
+                if (deleted)
+                {
+                    _allProducts.Remove(product);
+                    SearchProducts(); // Cập nhật lại list hiển thị
+                }
+                else
+                {
+                    System.Windows.MessageBox.Show("Có lỗi xảy ra khi xoá sản phẩm khỏi CSDL.");
+                }
             }
         }
 
