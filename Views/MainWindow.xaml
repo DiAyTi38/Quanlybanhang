@@ -14,6 +14,7 @@
     <DockPanel LastChildFill="True">
         <!-- Toolbar: restore product and customer buttons and keep thống kê -->
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
+            <Button Content="Bán Hàng / Xuất Hoá Đơn" Margin="0,0,10,0" Padding="12,6" Background="#2196F3" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="ShowBanHang_Click" />
             <Button Content="Quản lý Sản phẩm" Margin="0,0,10,0" Padding="8,4" Click="ShowProducts_Click" />
             <Button Content="Quản lý Khách hàng" Margin="0,0,10,0" Padding="8,4" Click="ShowKhachHang_Click" />
             <Button Content="Thống kê doanh thu" Padding="8,4" Click="ShowThongKe_Click" />

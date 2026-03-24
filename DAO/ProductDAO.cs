@@ -62,72 +62,42 @@ namespace Quanlybanhang.DAO
         // ✅ ✅ ✅ THÊM HÀM NÀY (FIX LỖI CHÍNH)
         public bool AddProduct(Product product)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
-                string query = @"INSERT INTO Products (Id, Name, Price, IsNew, Description, Status)
-                                 VALUES (@Id, @Name, @Price, @IsNew, @Description, @Status)";
+            using var cn = DatabaseHelper.GetConnection();
+            string query = @"INSERT INTO Products (Id, Name, Price, IsNew, Description, Status)
+                             VALUES (@Id, @Name, @Price, @IsNew, @Description, @Status)";
 
-                using var cmd = new SqlCommand(query, cn);
-                cmd.Parameters.AddWithValue("@Id", product.Id ?? string.Empty);
-                cmd.Parameters.AddWithValue("@Name", product.Name ?? string.Empty);
-                cmd.Parameters.AddWithValue("@Price", product.Price);
-                cmd.Parameters.AddWithValue("@IsNew", product.IsNew);
-                cmd.Parameters.AddWithValue("@Description", product.Description ?? string.Empty);
-                cmd.Parameters.AddWithValue("@Status", product.Status ?? "Còn hàng");
+            using var cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@Id", product.Id ?? string.Empty);
+            cmd.Parameters.AddWithValue("@Name", product.Name ?? string.Empty);
+            cmd.Parameters.AddWithValue("@Price", product.Price);
+            cmd.Parameters.AddWithValue("@IsNew", product.IsNew);
+            cmd.Parameters.AddWithValue("@Description", product.Description ?? string.Empty);
+            cmd.Parameters.AddWithValue("@Status", product.Status ?? "Còn hàng");
 
-                cn.Open();
-                return cmd.ExecuteNonQuery() > 0;
-            }
-            catch
-            {
-                // fallback: thêm vào list tạm
-                _fallback.Add(product);
-                return true;
-            }
+            cn.Open();
+            return cmd.ExecuteNonQuery() > 0;
         }
         public bool DeleteProduct(string id)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
+            using var cn = DatabaseHelper.GetConnection();
 
-                string query = "DELETE FROM Products WHERE Id = @Id";
+            string query = "DELETE FROM Products WHERE Id = @Id";
 
-                using var cmd = new SqlCommand(query, cn);
-                cmd.Parameters.AddWithValue("@Id", id ?? string.Empty);
+            using var cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@Id", id ?? string.Empty);
 
-                cn.Open();
-                return cmd.ExecuteNonQuery() > 0;
-            }
-            catch
-            {
-                // fallback: xóa trong list tạm
-                var item = _fallback.FirstOrDefault(p => p.Id == id);
-                if (item != null)
-                {
-                    _fallback.Remove(item);
-                }
-                return true;
-            }
+            cn.Open();
+            return cmd.ExecuteNonQuery() > 0;
         }
 
         public void UpdateProductStatus(string productId, string newStatus)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
-                using var cmd = new SqlCommand("UPDATE Products SET Status = @st WHERE Id = @id", cn);
-                cmd.Parameters.AddWithValue("@st", newStatus ?? string.Empty);
-                cmd.Parameters.AddWithValue("@id", productId ?? string.Empty);
-                cn.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch
-            {
-                var p = _fallback.FirstOrDefault(x => x.Id == productId);
-                if (p != null) p.Status = newStatus;
-            }
+            using var cn = DatabaseHelper.GetConnection();
+            using var cmd = new SqlCommand("UPDATE Products SET Status = @st WHERE Id = @id", cn);
+            cmd.Parameters.AddWithValue("@st", newStatus ?? string.Empty);
+            cmd.Parameters.AddWithValue("@id", productId ?? string.Empty);
+            cn.Open();
+            cmd.ExecuteNonQuery();
         }
     }
 }

@@ -45,94 +45,41 @@ namespace Quanlybanhang.DAO
 
         public void AddKhachHang(KhachHang kh)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
-                using var cmd = new SqlCommand("INSERT INTO KhachHang (MaKH, TenKH, SoDienThoai) VALUES (@ma,@ten,@sdt)", cn);
-                cmd.Parameters.AddWithValue("@ma", kh.MaKH ?? string.Empty);
-                cmd.Parameters.AddWithValue("@ten", kh.TenKH ?? string.Empty);
-                cmd.Parameters.AddWithValue("@sdt", kh.SoDienThoai ?? string.Empty);
-                cn.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("AddKhachHang error: " + ex.Message);
-                // fallback to in-memory list if DB insert fails
-                _fallback.Add(kh);
-            }
+            using var cn = DatabaseHelper.GetConnection();
+            using var cmd = new SqlCommand("INSERT INTO KhachHang (MaKH, TenKH, SoDienThoai) VALUES (@ma,@ten,@sdt)", cn);
+            cmd.Parameters.AddWithValue("@ma", kh.MaKH ?? string.Empty);
+            cmd.Parameters.AddWithValue("@ten", kh.TenKH ?? string.Empty);
+            cmd.Parameters.AddWithValue("@sdt", kh.SoDienThoai ?? string.Empty);
+            cn.Open();
+            cmd.ExecuteNonQuery();
         }
 
         public void UpdateKhachHang(KhachHang kh)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
-                using var cmd = new SqlCommand("UPDATE KhachHang SET TenKH = @ten, SoDienThoai = @sdt WHERE MaKH = @ma", cn);
-                cmd.Parameters.AddWithValue("@ten", kh.TenKH ?? string.Empty);
-                cmd.Parameters.AddWithValue("@sdt", kh.SoDienThoai ?? string.Empty);
-                cmd.Parameters.AddWithValue("@ma", kh.MaKH ?? string.Empty);
-                cn.Open();
-                var rows = cmd.ExecuteNonQuery();
+            using var cn = DatabaseHelper.GetConnection();
+            using var cmd = new SqlCommand("UPDATE KhachHang SET TenKH = @ten, SoDienThoai = @sdt WHERE MaKH = @ma", cn);
+            cmd.Parameters.AddWithValue("@ten", kh.TenKH ?? string.Empty);
+            cmd.Parameters.AddWithValue("@sdt", kh.SoDienThoai ?? string.Empty);
+            cmd.Parameters.AddWithValue("@ma", kh.MaKH ?? string.Empty);
+            cn.Open();
+            var rows = cmd.ExecuteNonQuery();
 
-                if (rows == 0)
-                {
-                    var ex = _fallback.Find(x => x.MaKH == kh.MaKH);
-                    if (ex != null)
-                    {
-                        ex.TenKH = kh.TenKH;
-                        ex.SoDienThoai = kh.SoDienThoai;
-                    }
-                }
-            }
-            catch (Exception ex)
+            if (rows == 0)
             {
-                Debug.WriteLine("UpdateKhachHang error: " + ex.Message);
-                var exi = _fallback.Find(x => x.MaKH == kh.MaKH);
-                if (exi != null)
-                {
-                    exi.TenKH = kh.TenKH;
-                    exi.SoDienThoai = kh.SoDienThoai;
-                }
+                throw new Exception("Không tìm thấy Khách Hàng. Có thể bạn đã sửa Mã KH hoặc khách đã bị xoá.");
             }
         }
 
         // Delete customer by MaKH; returns true if DB delete succeeded
         public bool DeleteKhachHang(string maKH)
         {
-            try
-            {
-                using var cn = DatabaseHelper.GetConnection();
-                using var cmd = new SqlCommand("DELETE FROM KhachHang WHERE MaKH = @ma", cn);
-                cmd.Parameters.AddWithValue("@ma", maKH ?? string.Empty);
-                cn.Open();
-                var rows = cmd.ExecuteNonQuery();
+            using var cn = DatabaseHelper.GetConnection();
+            using var cmd = new SqlCommand("DELETE FROM KhachHang WHERE MaKH = @ma", cn);
+            cmd.Parameters.AddWithValue("@ma", maKH ?? string.Empty);
+            cn.Open();
+            var rows = cmd.ExecuteNonQuery();
 
-                if (rows > 0)
-                    return true;
-
-                // if no rows affected, remove from fallback if present
-                var existing = _fallback.Find(x => x.MaKH == maKH);
-                if (existing != null)
-                {
-                    _fallback.Remove(existing);
-                    return true;
-                }
-
-                return false;
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine("DeleteKhachHang error: " + ex.ToString());
-                // fallback: remove from in-memory list so UI can reflect deletion
-                var existing = _fallback.Find(x => x.MaKH == maKH);
-                if (existing != null)
-                {
-                    _fallback.Remove(existing);
-                    return true;
-                }
-                return false;
-            }
+            return rows > 0;
         }
     }
 }

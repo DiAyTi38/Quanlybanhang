@@ -64,49 +64,67 @@ namespace Quanlybanhang.ViewModels
 
         public void Them()
         {
-            var newKh = new KhachHang
+            try
             {
-                MaKH = KhachHangDangChon.MaKH,
-                TenKH = KhachHangDangChon.TenKH,
-                SoDienThoai = KhachHangDangChon.SoDienThoai
-            };
-            _dao.AddKhachHang(newKh);
-            _allItems.Add(newKh);
-            ApplyFilter();
+                var newKh = new KhachHang
+                {
+                    MaKH = KhachHangDangChon.MaKH,
+                    TenKH = KhachHangDangChon.TenKH,
+                    SoDienThoai = KhachHangDangChon.SoDienThoai
+                };
+                _dao.AddKhachHang(newKh);
+                _allItems.Add(newKh);
+                ApplyFilter();
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
+            }
         }
 
         public void Sua()
         {
-            var existing = _allItems.FirstOrDefault(k => k == KhachHangDangChon || k.MaKH == KhachHangDangChon.MaKH);
-            if (existing != null)
+            try
             {
-                existing.TenKH = KhachHangDangChon.TenKH;
-                existing.SoDienThoai = KhachHangDangChon.SoDienThoai;
-                _dao.UpdateKhachHang(existing);
-                ApplyFilter();
+                var existing = _allItems.FirstOrDefault(k => k == KhachHangDangChon || k.MaKH == KhachHangDangChon.MaKH);
+                if (existing != null)
+                {
+                    existing.TenKH = KhachHangDangChon.TenKH;
+                    existing.SoDienThoai = KhachHangDangChon.SoDienThoai;
+                    _dao.UpdateKhachHang(existing);
+                    ApplyFilter();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
 
         public void Xoa()
         {
-            var existing = _allItems.FirstOrDefault(k => k == KhachHangDangChon || k.MaKH == KhachHangDangChon.MaKH);
-            if (existing != null)
+            try
             {
-                // try delete from DB, only remove from UI if DB deletion succeeded
-                bool deleted = _dao.DeleteKhachHang(existing.MaKH);
+                var existing = _allItems.FirstOrDefault(k => k == KhachHangDangChon || k.MaKH == KhachHangDangChon.MaKH);
+                if (existing != null)
+                {
+                    // try delete from DB, only remove from UI if DB deletion succeeded
+                    bool deleted = _dao.DeleteKhachHang(existing.MaKH);
 
-                if (deleted)
-                {
-                    _allItems.Remove(existing);
-                    DanhSachKhachHang.Remove(existing);
+                    if (deleted)
+                    {
+                        _allItems.Remove(existing);
+                        DanhSachKhachHang.Remove(existing);
+                    }
+                    else
+                    {
+                        System.Windows.MessageBox.Show("Không thể xoá dữ liệu từ Database.");
+                    }
                 }
-                else
-                {
-                    // If delete failed, still remove from UI only if you prefer; currently we keep it and you can inspect Debug output.
-                    // Optionally: remove anyway to reflect user's action despite DB issue:
-                    // _allItems.Remove(existing);
-                    // DanhSachKhachHang.Remove(existing);
-                }
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.Message);
             }
         }
     }

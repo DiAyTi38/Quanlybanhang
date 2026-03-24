@@ -6,6 +6,7 @@ namespace Quanlybanhang.Views
     {
         private Window? _khachHangWindow;
         private Window? _thongKeWindow;
+        private Window? _banHangWindow;
 
         private string role = ""; // ✅ Đưa vào trong class
 
@@ -34,6 +35,11 @@ namespace Quanlybanhang.Views
             {
                 _khachHangWindow.Close();
                 _khachHangWindow = null;
+            }
+            if (_banHangWindow != null)
+            {
+                _banHangWindow.Close();
+                _banHangWindow = null;
             }
 
             if (_thongKeWindow == null)
@@ -70,6 +76,11 @@ namespace Quanlybanhang.Views
                 _thongKeWindow.Close();
                 _thongKeWindow = null;
             }
+            if (_banHangWindow != null)
+            {
+                _banHangWindow.Close();
+                _banHangWindow = null;
+            }
 
             if (_khachHangWindow == null)
             {
@@ -105,8 +116,58 @@ namespace Quanlybanhang.Views
                 _khachHangWindow.Close();
                 _khachHangWindow = null;
             }
+            if (_thongKeWindow != null)
+            {
+                _thongKeWindow.Close();
+                _thongKeWindow = null;
+            }
+            if (_banHangWindow != null)
+            {
+                _banHangWindow.Close();
+                _banHangWindow = null;
+            }
 
             ProductsGrid.Visibility = Visibility.Visible;
+        }
+
+        private void ShowBanHang_Click(object sender, RoutedEventArgs e)
+        {
+            if (_khachHangWindow != null)
+            {
+                _khachHangWindow.Close();
+                _khachHangWindow = null;
+            }
+            if (_thongKeWindow != null)
+            {
+                _thongKeWindow.Close();
+                _thongKeWindow = null;
+            }
+
+            if (_banHangWindow == null)
+            {
+                _banHangWindow = new Window
+                {
+                    Title = "Bán Hàng / Xuất Hoá Đơn",
+                    Content = new BanHangView(),
+                    Owner = this,
+                    Width = 900,
+                    Height = 600,
+                    WindowStartupLocation = WindowStartupLocation.CenterOwner
+                };
+
+                _banHangWindow.Closed += (s, ev) =>
+                {
+                    _banHangWindow = null;
+                    ProductsGrid.Visibility = Visibility.Visible;
+                };
+
+                ProductsGrid.Visibility = Visibility.Collapsed;
+                _banHangWindow.Show();
+            }
+            else
+            {
+                _banHangWindow.Activate();
+            }
         }
     }
 }
