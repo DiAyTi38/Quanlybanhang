@@ -81,7 +81,8 @@ namespace Quanlybanhang.ViewModels
             try
             {
                 var dao = new Quanlybanhang.DAO.ProductDAO();
-                var list = dao.GetAllProducts();
+                // Chỉ hiển thị sản phẩm khác "Đã bán"
+                var list = dao.GetAllProducts().Where(p => p.Status != "Đã bán").ToList();
                 _allProducts = new ObservableCollection<Product>(list);
             }
             catch
@@ -126,9 +127,7 @@ namespace Quanlybanhang.ViewModels
                 if (!result) return;
 
                 // reload lại từ database (quan trọng)
-                var list = dao.GetAllProducts();
-                _allProducts = new ObservableCollection<Product>(list);
-                Products = new ObservableCollection<Product>(_allProducts);
+                LoadData();
 
                 // reset form
                 NewId = string.Empty;
@@ -144,7 +143,17 @@ namespace Quanlybanhang.ViewModels
 
         private void DeleteProduct(Product product)
         {
-            if (product != null)
+            if (product == null) return;
+
+            var confirm = System.Windows.MessageBox.Show(
+                $"Bạn có chắc chắn muốn xoá sản phẩm: {product.Name} (Mã: {product.Id})?", 
+                "Xác nhận xoá", 
+                System.Windows.MessageBoxButton.YesNo, 
+                System.Windows.MessageBoxImage.Warning);
+                
+            if (confirm != System.Windows.MessageBoxResult.Yes) return;
+
+            try
             {
                 var dao = new Quanlybanhang.DAO.ProductDAO();
                 bool deleted = dao.DeleteProduct(product.Id);
@@ -153,11 +162,16 @@ namespace Quanlybanhang.ViewModels
                 {
                     _allProducts.Remove(product);
                     SearchProducts(); // Cập nhật lại list hiển thị
+                    System.Windows.MessageBox.Show("Xoá sản phẩm thành công!", "Thành công", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
                 }
                 else
                 {
-                    System.Windows.MessageBox.Show("Có lỗi xảy ra khi xoá sản phẩm khỏi CSDL.");
+                    System.Windows.MessageBox.Show("Không tìm thấy sản phẩm này trong kho để xoá.", "Thất bại", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning);
                 }
+            }
+            catch (Exception ex)
+            {
+                 System.Windows.MessageBox.Show("Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message, "Không thể xoá", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
             }
         }
 
