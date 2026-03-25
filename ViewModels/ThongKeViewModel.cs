@@ -28,7 +28,8 @@ namespace Quanlybanhang.ViewModels
 
             SoSanPhamBan = hoaDons.Sum(h => h.ChiTiet.Sum(ct => ct.SoLuong));
 
-            TonKho = prodDao.GetAllProducts().Count;
+            TonKho = prodDao.GetAllProducts()
+                .Where(p => p.Status != "Đã bán").Count();
         }
     }
 }

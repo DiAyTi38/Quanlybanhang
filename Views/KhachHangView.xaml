@@ -2,64 +2,126 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-	<Grid Margin="10">
+    <Grid Background="#F5F7FA" Margin="15">
 
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="250"/>
-			<ColumnDefinition Width="*"/>
-		</Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-       <!-- FORM NHẬP -->
-		<StackPanel Grid.Column="0"> 
+        <!-- FORM -->
+        <Border Grid.Column="0"
+                Background="White"
+                CornerRadius="10"
+                Padding="15"
+                Margin="0,0,10,0">
 
-			<TextBlock Text="Mã khách hàng"/>
-			<TextBox Text="{Binding KhachHangDangChon.MaKH}" Margin="0,5,0,10"/>
+            <StackPanel>
 
-			<TextBlock Text="Tên khách hàng"/>
-			<TextBox Text="{Binding KhachHangDangChon.TenKH}" Margin="0,5,0,10"/>
+                <TextBlock Text="Thông tin khách hàng"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Margin="0,0,0,15"/>
 
-			<TextBlock Text="Số điện thoại"/>
-			<TextBox Text="{Binding KhachHangDangChon.SoDienThoai}" Margin="0,5,0,10"/>
+                <!-- Mã KH -->
+                <TextBlock Text="Mã khách hàng"/>
+                <TextBox Text="{Binding KhachHangDangChon.MaKH}"
+                         Margin="0,5,0,10"
+                         Height="30"/>
 
-			<Button Content="Thêm" Margin="0,10,0,5" Click="Them_Click"/>
-			<Button Content="Sửa" Margin="0,5" Click="Sua_Click"/>
-			<Button Content="Xóa" Margin="0,5" Click="Xoa_Click"/>
+                <!-- Tên KH -->
+                <TextBlock Text="Tên khách hàng"/>
+                <TextBox Text="{Binding KhachHangDangChon.TenKH}"
+                         Margin="0,5,0,10"
+                         Height="30"/>
 
-		</StackPanel>
+                <!-- SĐT -->
+                <TextBlock Text="Số điện thoại"/>
+                <TextBox Text="{Binding KhachHangDangChon.SoDienThoai}"
+                         Margin="0,5,0,15"
+                         Height="30"/>
 
-		<!-- DANH SÁCH -->
-		<StackPanel Grid.Column="1" Margin="10,0,0,0">
+                <!-- BUTTON -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <TextBlock Text="Tìm kiếm" Margin="0,0,0,5"/>
-			<TextBox Width="200"
-				 Margin="0,0,0,10"
-				 Text="{Binding TuKhoa, UpdateSourceTrigger=PropertyChanged}"/>
+                    <Button Content="Thêm"
+                            Width="70"
+                            Margin="5"
+                            Background="#4CAF50"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Click="Them_Click"/>
 
-			<ListView ItemsSource="{Binding DanhSachKhachHang}"
-					  SelectedItem="{Binding KhachHangDangChon}">
+                    <Button Content="Sửa"
+                            Width="70"
+                            Margin="5"
+                            Background="#2196F3"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Click="Sua_Click"/>
 
-				<ListView.View>
-					<GridView>
+                    <Button Content="Xóa"
+                            Width="70"
+                            Margin="5"
+                            Background="#F44336"
+                            Foreground="White"
+                            BorderThickness="0"
+                            Click="Xoa_Click"/>
 
-						<GridViewColumn Header="Mã KH"
-										DisplayMemberBinding="{Binding MaKH}"
-										Width="100"/>
+                </StackPanel>
 
-						<GridViewColumn Header="Tên KH"
-										DisplayMemberBinding="{Binding TenKH}"
-										Width="150"/>
+            </StackPanel>
+        </Border>
 
-						<GridViewColumn Header="SĐT"
-										DisplayMemberBinding="{Binding SoDienThoai}"
-										Width="120"/>
+        <!-- DANH SÁCH -->
+        <Border Grid.Column="1"
+                Background="White"
+                CornerRadius="10"
+                Padding="15">
 
-					</GridView>
-				</ListView.View>
+            <StackPanel>
 
-			</ListView>
+                <TextBlock Text="Danh sách khách hàng"
+                           FontSize="18"
+                           FontWeight="Bold"
+                           Margin="0,0,0,10"/>
 
-		</StackPanel>
+                <!-- Search -->
+                <TextBox Width="250"
+                         Height="30"
+                         Margin="0,0,0,10"
+                         Padding="5"
+                         Text="{Binding TuKhoa, UpdateSourceTrigger=PropertyChanged}"
+                         ToolTip="Nhập để tìm kiếm..."/>
 
-	</Grid>
+                <!-- List -->
+                <ListView ItemsSource="{Binding DanhSachKhachHang}"
+                          SelectedItem="{Binding KhachHangDangChon}"
+                          BorderThickness="0">
+
+                    <ListView.View>
+                        <GridView>
+
+                            <GridViewColumn Header="Mã KH"
+                                            DisplayMemberBinding="{Binding MaKH}"
+                                            Width="100"/>
+
+                            <GridViewColumn Header="Tên KH"
+                                            DisplayMemberBinding="{Binding TenKH}"
+                                            Width="180"/>
+
+                            <GridViewColumn Header="SĐT"
+                                            DisplayMemberBinding="{Binding SoDienThoai}"
+                                            Width="140"/>
+
+                        </GridView>
+                    </ListView.View>
+
+                </ListView>
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
 
 </UserControl>

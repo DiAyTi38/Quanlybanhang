@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using System.Windows;
 using Quanlybanhang.DAO;
 using Quanlybanhang.Models;
 
@@ -18,17 +19,33 @@ namespace Quanlybanhang.ViewModels
             set { _newProduct = value; OnPropertyChanged(); }
         }
 
+        // ✅ FIX LỖI SelectedProduct
+        private Product _selectedProduct;
+        public Product SelectedProduct
+        {
+            get => _selectedProduct;
+            set
+            {
+                _selectedProduct = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand AddCommand { get; }
+        public ICommand DeleteCommand { get; }
 
         public ProductViewModel()
         {
             Products = new ObservableCollection<Product>(_dao.GetAllProducts());
+
             AddCommand = new RelayCommand(AddProduct, CanAddProduct);
+            DeleteCommand = new RelayCommand(DeleteProduct, () => SelectedProduct != null);
         }
 
         private bool CanAddProduct()
         {
-            return !string.IsNullOrWhiteSpace(NewProduct?.Id) && !string.IsNullOrWhiteSpace(NewProduct?.Name);
+            return !string.IsNullOrWhiteSpace(NewProduct?.Id) &&
+                   !string.IsNullOrWhiteSpace(NewProduct?.Name);
         }
 
         private void AddProduct()
@@ -45,32 +62,26 @@ namespace Quanlybanhang.ViewModels
 
             var inserted = _dao.AddProduct(prod);
 
-            // Add to observable collection so UI updates immediately
-            Products.Insert(0, prod);
+            if (inserted)
+                Products.Insert(0, prod);
 
-            // Reset input
             NewProduct = new Product();
-            // Force CanExecute update
             CommandManager.InvalidateRequerySuggested();
         }
+
         private void DeleteProduct()
         {
             if (SelectedProduct == null)
                 return;
 
-            // Gọi DAO xóa trong database
             var deleted = _dao.DeleteProduct(SelectedProduct.Id);
 
             if (deleted)
             {
-                // Xóa khỏi ObservableCollection để update UI
                 Products.Remove(SelectedProduct);
             }
 
-            // Reset chọn
             SelectedProduct = null;
-
-            // Update trạng thái nút (CanExecute)
             CommandManager.InvalidateRequerySuggested();
         }
     }

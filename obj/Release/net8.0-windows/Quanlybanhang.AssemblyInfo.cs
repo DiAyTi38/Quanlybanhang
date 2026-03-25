@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Quanlybanhang")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c35fff3e861937a27a2537f1248fc6878a37450")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d6fc68f7880773152fc3932b33f4682cc83d9f5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Quanlybanhang")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Quanlybanhang")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

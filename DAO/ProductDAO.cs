@@ -13,9 +13,6 @@ namespace Quanlybanhang.DAO
         // Fallback static list used when DB access fails
         private static readonly List<Product> _fallback = new List<Product>
         {
-            new Product { Id = "SH01", Name = "Áo khoác da Vintage", Price = 350000, IsNew = false, Status = "Còn hàng" },
-            new Product { Id = "SH02", Name = "Giày thể thao Nike Air", Price = 800000, IsNew = false, Status = "Còn hàng" },
-            new Product { Id = "NEW01", Name = "Áo thun Local Brand", Price = 250000, IsNew = true, Status = "Còn hàng" }
         };
 
         public List<Product> GetAllProducts()
@@ -79,15 +76,28 @@ namespace Quanlybanhang.DAO
         }
         public bool DeleteProduct(string id)
         {
-            using var cn = DatabaseHelper.GetConnection();
+            try
+            {
+                using var cn = DatabaseHelper.GetConnection();
 
-            string query = "DELETE FROM Products WHERE Id = @Id";
+                string query = "DELETE FROM Products WHERE Id = @Id";
 
-            using var cmd = new SqlCommand(query, cn);
-            cmd.Parameters.AddWithValue("@Id", id ?? string.Empty);
+                using var cmd = new SqlCommand(query, cn);
+                cmd.Parameters.AddWithValue("@Id", id ?? string.Empty);
 
-            cn.Open();
-            return cmd.ExecuteNonQuery() > 0;
+                cn.Open();
+                return cmd.ExecuteNonQuery() > 0;
+            }
+            catch
+            {
+                // fallback: xóa trong list tạm
+                var item = _fallback.FirstOrDefault(p => p.Id == id);
+                if (item != null)
+                {
+                    _fallback.Remove(item);
+                }
+                return true;
+            }
         }
 
         public void UpdateProductStatus(string productId, string newStatus)

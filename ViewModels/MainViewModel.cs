@@ -54,9 +54,9 @@ namespace Quanlybanhang.ViewModels
         {
             get => _searchKeyword;
             // Tự động tìm kiếm ngay khi người dùng gõ phím
-            set 
-            { 
-                _searchKeyword = value; 
+            set
+            {
+                _searchKeyword = value;
                 OnPropertyChanged();
                 SearchProducts();
             }
@@ -146,18 +146,26 @@ namespace Quanlybanhang.ViewModels
             if (product == null) return;
 
             var confirm = System.Windows.MessageBox.Show(
+
                 $"Bạn có chắc chắn muốn xoá sản phẩm: {product.Name} (Mã: {product.Id})?", 
                 "Xác nhận xoá", 
                 System.Windows.MessageBoxButton.YesNo, 
                 System.Windows.MessageBoxImage.Warning);
                 
+
+                $"Bạn có chắc chắn muốn xoá sản phẩm: {product.Name} (Mã: {product.Id})?",
+                "Xác nhận xoá",
+                System.Windows.MessageBoxButton.YesNo,
+                System.Windows.MessageBoxImage.Warning);
+
+
             if (confirm != System.Windows.MessageBoxResult.Yes) return;
 
             try
             {
                 var dao = new Quanlybanhang.DAO.ProductDAO();
                 bool deleted = dao.DeleteProduct(product.Id);
-                
+
                 if (deleted)
                 {
                     _allProducts.Remove(product);
@@ -171,7 +179,9 @@ namespace Quanlybanhang.ViewModels
             }
             catch (Exception ex)
             {
+
                  System.Windows.MessageBox.Show("Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message, "Không thể xoá", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                System.Windows.MessageBox.Show("Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message, "Không thể xoá", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
             }
         }
 
@@ -186,11 +196,11 @@ namespace Quanlybanhang.ViewModels
             {
                 // Lọc danh sách theo Tên hoặc Mã
                 string keyword = SearchKeyword.ToLower();
-                var filteredResult = _allProducts.Where(p => 
-                    p.Name.ToLower().Contains(keyword) || 
+                var filteredResult = _allProducts.Where(p =>
+                    p.Name.ToLower().Contains(keyword) ||
                     p.Id.ToLower().Contains(keyword)
                 );
-                
+
                 Products = new ObservableCollection<Product>(filteredResult);
             }
         }

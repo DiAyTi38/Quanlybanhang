@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\dowload\\hhhhh\\hhhhh\\Quanlybanhang.csproj": {}
+    "D:\\New folder (8)\\Quanlybanhang.csproj": {}
   },
   "projects": {
-    "F:\\dowload\\hhhhh\\hhhhh\\Quanlybanhang.csproj": {
+    "D:\\New folder (8)\\Quanlybanhang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\dowload\\hhhhh\\hhhhh\\Quanlybanhang.csproj",
+        "projectUniqueName": "D:\\New folder (8)\\Quanlybanhang.csproj",
         "projectName": "Quanlybanhang",
-        "projectPath": "F:\\dowload\\hhhhh\\hhhhh\\Quanlybanhang.csproj",
+        "projectPath": "D:\\New folder (8)\\Quanlybanhang.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "F:\\dowload\\hhhhh\\hhhhh\\obj\\",
+        "outputPath": "D:\\New folder (8)\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,7 +48,7 @@
           "dependencies": {
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[5.1.0, )"
+              "version": "[7.0.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",

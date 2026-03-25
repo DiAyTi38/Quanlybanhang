@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ViewModels"
   ],
-  "SelectedNode": "\\Quanlybanhang.sln",
+  "SelectedNode": "\\ViewModels\\MainViewModel.cs",
   "PreviewInSolutionExplorer": false
 }

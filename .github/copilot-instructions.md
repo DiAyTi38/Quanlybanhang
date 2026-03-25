@@ -1,0 +1,6 @@
+# Copilot Instructions
+
+## Project Guidelines
+- Main view should display only products with `Status == "Còn hàng"` by default and exclude products marked as `Status == "Đã bán"` after a sale, which are updated by `HoaDonDAO.TaoHoaDon` calling `ProductDAO.UpdateProductStatus`. This preference is recorded to ensure the main window consistently shows only available products.
+- `MainViewModel` must load only available products (Status == "Còn hàng") using `ProductDAO.GetAvailableProducts`. The `LoadData` method in `MainViewModel` ensures that only available products are loaded and refreshes the product list after `AddProduct`/`DeleteProduct` actions and when returning from the sales window. When updating product lists, prefer reloading available products via `ProductDAO.GetAvailableProducts` to keep the main view excluding sold items. The `AddProduct` method also reloads available products after an insert to maintain the integrity of the displayed list.
+- `MainViewModel` should initialize `_allProducts` and `_products` to empty `ObservableCollection` to avoid nullability warnings. This ensures the main window only displays available products.
