@@ -159,6 +159,11 @@ namespace Quanlybanhang.Views
                 {
                     _banHangWindow = null;
                     ProductsGrid.Visibility = Visibility.Visible;
+
+                    if (this.DataContext is Quanlybanhang.ViewModels.MainViewModel vm)
+                    {
+                        vm.LoadData();
+                    }
                 };
 
                 ProductsGrid.Visibility = Visibility.Collapsed;

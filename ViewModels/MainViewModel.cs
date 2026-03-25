@@ -68,6 +68,15 @@ namespace Quanlybanhang.ViewModels
 
         public MainViewModel()
         {
+            LoadData();
+
+            // Khởi tạo Commands
+            AddCommand = new RelayCommand(AddProduct, CanAddProduct);
+            DeleteCommand = new RelayCommand<Product>(DeleteProduct);
+        }
+
+        public void LoadData()
+        {
             // Try to load from database via DAO
             try
             {
@@ -86,11 +95,8 @@ namespace Quanlybanhang.ViewModels
                 };
             }
 
-            _products = new ObservableCollection<Product>(_allProducts);
-
-            // Khởi tạo Commands
-            AddCommand = new RelayCommand(AddProduct, CanAddProduct);
-            DeleteCommand = new RelayCommand<Product>(DeleteProduct);
+            Products = new ObservableCollection<Product>(_allProducts);
+            SearchKeyword = string.Empty;
         }
 
         private bool CanAddProduct()

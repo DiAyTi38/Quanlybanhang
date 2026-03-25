@@ -140,6 +140,10 @@ namespace Quanlybanhang.ViewModels
                 // Lưu hoá đơn (bên trong sẽ UpdateProductStatus thành "Đã bán")
                 _hdDao.TaoHoaDon(hd);
                 
+                // Cập nhật doanh thu ngày vào CSDL
+                var dtDao = new DoanhThuDAO();
+                dtDao.AddDoanhThu(DateTime.Now, TongTien);
+                
                 MessageBox.Show($"Xuất hoá đơn thành công!\nThu: {TongTien:N0} VNĐ", "Thành công", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 // Reload lại kho hàng

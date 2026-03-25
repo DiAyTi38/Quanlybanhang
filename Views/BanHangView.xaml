@@ -15,9 +15,10 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <!-- Top: Chọn Khách Hàng -->
+        <!-- Top: Chọn Khách Hàng và Quay Lại -->
         <Border Grid.Row="0" Margin="0,0,0,10" Padding="10" BorderBrush="#ccc" BorderThickness="1" CornerRadius="5">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                <Button Content="⬅ Quay Lại" Width="90" Height="30" Margin="0,0,20,0" Background="#ECEFF1" BorderBrush="#B0BEC5" Cursor="Hand" Click="btnBack_Click"/>
                 <TextBlock Text="Chọn Khách Hàng:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,10,0"/>
                 <ComboBox ItemsSource="{Binding Customers}" 
                           SelectedItem="{Binding SelectedCustomer}" 

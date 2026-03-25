@@ -8,5 +8,14 @@ namespace Quanlybanhang.Views
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var window = System.Windows.Window.GetWindow(this);
+            if (window != null)
+            {
+                window.Close();
+            }
+        }
     }
 }
