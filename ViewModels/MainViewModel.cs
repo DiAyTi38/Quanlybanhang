@@ -9,10 +9,10 @@ namespace Quanlybanhang.ViewModels
     public class MainViewModel : BaseViewModel
     {
         // Danh sách sản phẩm gốc
-        private ObservableCollection<Product> _allProducts;
+        private ObservableCollection<Product> _allProducts = new ObservableCollection<Product>();
 
         // Danh sách sản phẩm đang hiển thị (phục vụ tìm kiếm)
-        private ObservableCollection<Product> _products;
+        private ObservableCollection<Product> _products = new ObservableCollection<Product>();
         public ObservableCollection<Product> Products
         {
             get => _products;
@@ -77,12 +77,12 @@ namespace Quanlybanhang.ViewModels
 
         public void LoadData()
         {
-            // Try to load from database via DAO
+            // Try to load available products from database via DAO
             try
             {
                 var dao = new Quanlybanhang.DAO.ProductDAO();
-                // Chỉ hiển thị sản phẩm khác "Đã bán"
-                var list = dao.GetAllProducts().Where(p => p.Status != "Đã bán").ToList();
+                // Load only available products (per project guideline)
+                var list = dao.GetAvailableProducts().ToList();
                 _allProducts = new ObservableCollection<Product>(list);
             }
             catch
@@ -146,18 +146,10 @@ namespace Quanlybanhang.ViewModels
             if (product == null) return;
 
             var confirm = System.Windows.MessageBox.Show(
-
-                $"Bạn có chắc chắn muốn xoá sản phẩm: {product.Name} (Mã: {product.Id})?", 
-                "Xác nhận xoá", 
-                System.Windows.MessageBoxButton.YesNo, 
-                System.Windows.MessageBoxImage.Warning);
-                
-
                 $"Bạn có chắc chắn muốn xoá sản phẩm: {product.Name} (Mã: {product.Id})?",
                 "Xác nhận xoá",
                 System.Windows.MessageBoxButton.YesNo,
                 System.Windows.MessageBoxImage.Warning);
-
 
             if (confirm != System.Windows.MessageBoxResult.Yes) return;
 
@@ -179,9 +171,11 @@ namespace Quanlybanhang.ViewModels
             }
             catch (Exception ex)
             {
-
-                 System.Windows.MessageBox.Show("Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message, "Không thể xoá", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
-                System.Windows.MessageBox.Show("Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message, "Không thể xoá", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
+                System.Windows.MessageBox.Show(
+                    "Lỗi khi xoá sản phẩm.\n\nLưu ý: Bạn không thể xoá một sản phẩm đã có lịch sử gắn với hoá đơn mua hàng. Tốt nhất hãy dùng chức năng Ẩn (nếu có).\n\nChi tiết lỗi CSDL: " + ex.Message,
+                    "Không thể xoá",
+                    System.Windows.MessageBoxButton.OK,
+                    System.Windows.MessageBoxImage.Error);
             }
         }
 
