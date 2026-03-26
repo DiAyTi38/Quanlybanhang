@@ -1,53 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\New folder (8)\\",
+  "WorkspaceRootPath": "D:\\New folder (5)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\viewmodels\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\viewmodels\\khachhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\khachhangviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\dao\\doanhthudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:dao\\doanhthudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\views\\khachhangview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\khachhangview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\khachhangview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\khachhangview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\khachhangview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\viewmodels\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\thongkeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\dao\\doanhthudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:dao\\doanhthudao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\loginview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:views\\loginview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:dao\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (8)\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|d:\\new folder (5)\\.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{5FE3DC98-7889-C901-2596-1E28924460C3}|Quanlybanhang.csproj|solutionrelative:.github\\copilot-instructions.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
@@ -63,10 +71,36 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "KhachHangViewModel.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\ViewModels\\KhachHangViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\KhachHangViewModel.cs",
+              "ToolTip": "D:\\New folder (5)\\ViewModels\\KhachHangViewModel.cs",
+              "RelativeToolTip": "ViewModels\\KhachHangViewModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAowKEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T02:20:09.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhachHangView.xaml.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\KhachHangView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\KhachHangView.xaml.cs",
+              "ToolTip": "D:\\New folder (5)\\Views\\KhachHangView.xaml.cs",
+              "RelativeToolTip": "Views\\KhachHangView.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T02:13:27.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "ThongKeViewModel.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\ViewModels\\ThongKeViewModel.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\ViewModels\\ThongKeViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ThongKeViewModel.cs",
-              "ToolTip": "D:\\New folder (8)\\ViewModels\\ThongKeViewModel.cs",
+              "ToolTip": "D:\\New folder (5)\\ViewModels\\ThongKeViewModel.cs",
               "RelativeToolTip": "ViewModels\\ThongKeViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -75,50 +109,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainViewModel.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\ViewModels\\MainViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
-              "ToolTip": "D:\\New folder (8)\\ViewModels\\MainViewModel.cs",
-              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T13:10:56.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "copilot-instructions.md",
-              "DocumentMoniker": "D:\\New folder (8)\\.github\\copilot-instructions.md",
+              "DocumentMoniker": "D:\\New folder (5)\\.github\\copilot-instructions.md",
               "RelativeDocumentMoniker": ".github\\copilot-instructions.md",
-              "ToolTip": "D:\\New folder (8)\\.github\\copilot-instructions.md",
+              "ToolTip": "D:\\New folder (5)\\.github\\copilot-instructions.md",
               "RelativeToolTip": ".github\\copilot-instructions.md",
               "ViewState": "AgIAAAQAAAAAAAAAAABBwAUAAADAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2026-03-25T12:56:01.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T12:56:01.961Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "DoanhThuDAO.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\DAO\\DoanhThuDAO.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\DAO\\DoanhThuDAO.cs",
               "RelativeDocumentMoniker": "DAO\\DoanhThuDAO.cs",
-              "ToolTip": "D:\\New folder (8)\\DAO\\DoanhThuDAO.cs",
+              "ToolTip": "D:\\New folder (5)\\DAO\\DoanhThuDAO.cs",
               "RelativeToolTip": "DAO\\DoanhThuDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T12:27:49.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T12:27:49.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\Views\\MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml.cs",
-              "ToolTip": "D:\\New folder (8)\\Views\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\New folder (5)\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "Views\\MainWindow.xaml.cs",
               "ViewState": "AgIAAJAAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -128,10 +147,34 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "KhachHangView.xaml",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\KhachHangView.xaml",
+              "RelativeDocumentMoniker": "Views\\KhachHangView.xaml",
+              "ToolTip": "D:\\New folder (5)\\Views\\KhachHangView.xaml",
+              "RelativeToolTip": "Views\\KhachHangView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-25T12:16:00.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\ViewModels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainViewModel.cs",
+              "ToolTip": "D:\\New folder (5)\\ViewModels\\MainViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-25T13:10:56.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\New folder (8)\\Views\\MainWindow.xaml",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Views\\MainWindow.xaml",
-              "ToolTip": "D:\\New folder (8)\\Views\\MainWindow.xaml",
+              "ToolTip": "D:\\New folder (5)\\Views\\MainWindow.xaml",
               "RelativeToolTip": "Views\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-03-25T12:18:37.004Z",
@@ -139,34 +182,22 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "KhachHangView.xaml",
-              "DocumentMoniker": "D:\\New folder (8)\\Views\\KhachHangView.xaml",
-              "RelativeDocumentMoniker": "Views\\KhachHangView.xaml",
-              "ToolTip": "D:\\New folder (8)\\Views\\KhachHangView.xaml",
-              "RelativeToolTip": "Views\\KhachHangView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-25T12:16:00.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "LoginView.xaml",
-              "DocumentMoniker": "D:\\New folder (8)\\Views\\LoginView.xaml",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\LoginView.xaml",
               "RelativeDocumentMoniker": "Views\\LoginView.xaml",
-              "ToolTip": "D:\\New folder (8)\\Views\\LoginView.xaml",
+              "ToolTip": "D:\\New folder (5)\\Views\\LoginView.xaml",
               "RelativeToolTip": "Views\\LoginView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-03-25T12:12:17.343Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T12:12:17.343Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "LoginView.xaml.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\Views\\LoginView.xaml.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\Views\\LoginView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\LoginView.xaml.cs",
-              "ToolTip": "D:\\New folder (8)\\Views\\LoginView.xaml.cs",
+              "ToolTip": "D:\\New folder (5)\\Views\\LoginView.xaml.cs",
               "RelativeToolTip": "Views\\LoginView.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -174,24 +205,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "ProductDAO.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\DAO\\ProductDAO.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\DAO\\ProductDAO.cs",
               "RelativeDocumentMoniker": "DAO\\ProductDAO.cs",
-              "ToolTip": "D:\\New folder (8)\\DAO\\ProductDAO.cs",
+              "ToolTip": "D:\\New folder (5)\\DAO\\ProductDAO.cs",
               "RelativeToolTip": "DAO\\ProductDAO.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAUwHAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T12:11:35.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T12:11:35.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "DBConnection.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\DAO\\DBConnection.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\DAO\\DBConnection.cs",
               "RelativeDocumentMoniker": "DAO\\DBConnection.cs",
-              "ToolTip": "D:\\New folder (8)\\DAO\\DBConnection.cs",
+              "ToolTip": "D:\\New folder (5)\\DAO\\DBConnection.cs",
               "RelativeToolTip": "DAO\\DBConnection.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -199,16 +229,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "ProductViewModel.cs",
-              "DocumentMoniker": "D:\\New folder (8)\\ViewModels\\ProductViewModel.cs",
+              "DocumentMoniker": "D:\\New folder (5)\\ViewModels\\ProductViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ProductViewModel.cs",
-              "ToolTip": "D:\\New folder (8)\\ViewModels\\ProductViewModel.cs",
+              "ToolTip": "D:\\New folder (5)\\ViewModels\\ProductViewModel.cs",
               "RelativeToolTip": "ViewModels\\ProductViewModel.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA9wCIAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-25T07:29:04.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-25T07:29:04.459Z"
             }
           ]
         }
