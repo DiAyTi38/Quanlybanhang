@@ -27,12 +27,12 @@ namespace Quanlybanhang.DAO
                 while (rd.Read())
                 {
                     var p = new Product();
-                    p.Id = rd[0] == DBNull.Value ? string.Empty : rd.GetString(0);
-                    p.Name = rd[1] == DBNull.Value ? string.Empty : rd.GetString(1);
-                    p.Price = rd[2] == DBNull.Value ? 0 : rd.GetDecimal(2);
-                    p.IsNew = rd[3] == DBNull.Value ? false : rd.GetBoolean(3);
-                    p.Description = rd[4] == DBNull.Value ? string.Empty : rd.GetString(4);
-                    p.Status = rd[5] == DBNull.Value ? string.Empty : rd.GetString(5);
+                    p.Id = rd[0] == DBNull.Value ? string.Empty : rd[0].ToString();
+                    p.Name = rd[1] == DBNull.Value ? string.Empty : rd[1].ToString();
+                    p.Price = rd[2] == DBNull.Value ? 0 : Convert.ToDecimal(rd[2]);
+                    p.IsNew = rd[3] == DBNull.Value ? false : Convert.ToBoolean(rd[3]);
+                    p.Description = rd[4] == DBNull.Value ? string.Empty : rd[4].ToString();
+                    p.Status = rd[5] == DBNull.Value ? string.Empty : rd[5].ToString();
                     list.Add(p);
                 }
                 return list;
