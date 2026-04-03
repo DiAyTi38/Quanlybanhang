@@ -60,11 +60,10 @@ namespace Quanlybanhang.DAO
         public bool AddProduct(Product product)
         {
             using var cn = DatabaseHelper.GetConnection();
-            string query = @"INSERT INTO Products (Id, Name, Price, IsNew, Description, Status)
-                             VALUES (@Id, @Name, @Price, @IsNew, @Description, @Status)";
+            string query = @"INSERT INTO Products (Name, Price, IsNew, Description, Status)
+                             VALUES (@Name, @Price, @IsNew, @Description, @Status)";
 
             using var cmd = new SqlCommand(query, cn);
-            cmd.Parameters.AddWithValue("@Id", product.Id ?? string.Empty);
             cmd.Parameters.AddWithValue("@Name", product.Name ?? string.Empty);
             cmd.Parameters.AddWithValue("@Price", product.Price);
             cmd.Parameters.AddWithValue("@IsNew", product.IsNew);

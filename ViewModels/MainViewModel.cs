@@ -110,14 +110,9 @@ namespace Quanlybanhang.ViewModels
         {
             try
             {
-                // Nếu người dùng không nhập mã, tự động sinh mã theo thời gian
-                string autoId = string.IsNullOrWhiteSpace(NewId) 
-                    ? "SP" + DateTime.Now.ToString("yyyyMMddHHmmss") 
-                    : NewId.Trim();
-
                 var newProd = new Product
                 {
-                    Id = autoId,
+                    Id = "", // Database sẽ tự động cấp số dựa trên thuộc tính IDENTITY
                     Name = NewName,
                     Price = NewPrice,
                     IsNew = NewIsNew,
