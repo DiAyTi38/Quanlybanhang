@@ -32,7 +32,7 @@
             <StackPanel>
                 <TextBlock Text="NHẬP HÀNG MỚI" FontSize="18" FontWeight="Bold" Foreground="#333" Margin="0,0,0,15" HorizontalAlignment="Center"/>
 
-                <TextBlock Text="Mã sản phẩm:" FontWeight="SemiBold" Margin="0,10,0,5"/>
+                <TextBlock Text="Mã sản phẩm (Để trống sẽ tạo tự động):" FontWeight="SemiBold" Margin="0,10,0,5"/>
                 <!-- UpdateSourceTrigger=PropertyChanged giúp update ViewModel ngay khi gõ phím, để nút Thêm sáng lên lập tức -->
                 <TextBox Text="{Binding NewId, UpdateSourceTrigger=PropertyChanged}" Padding="5" />
 

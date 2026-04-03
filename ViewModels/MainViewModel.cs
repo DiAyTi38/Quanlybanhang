@@ -102,17 +102,22 @@ namespace Quanlybanhang.ViewModels
 
         private bool CanAddProduct()
         {
-            // Chỉ cho phép bấm nút Thêm khi Mã và Tên không bị trống
-            return !string.IsNullOrWhiteSpace(NewId) && !string.IsNullOrWhiteSpace(NewName);
+            // Chỉ bắt buộc Tên sản phẩm. Mã sản phẩm (NewId) có thể để trống.
+            return !string.IsNullOrWhiteSpace(NewName);
         }
 
         private void AddProduct()
         {
             try
             {
+                // Nếu người dùng không nhập mã, tự động sinh mã theo thời gian
+                string autoId = string.IsNullOrWhiteSpace(NewId) 
+                    ? "SP" + DateTime.Now.ToString("yyyyMMddHHmmss") 
+                    : NewId.Trim();
+
                 var newProd = new Product
                 {
-                    Id = NewId,
+                    Id = autoId,
                     Name = NewName,
                     Price = NewPrice,
                     IsNew = NewIsNew,
