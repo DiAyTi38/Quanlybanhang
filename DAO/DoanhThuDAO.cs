@@ -62,5 +62,43 @@ namespace Quanlybanhang.DAO
                 System.Diagnostics.Debug.WriteLine("AddDoanhThu error: " + ex.Message);
             }
         }
+        public decimal GetDoanhThuNgay(DateTime ngay)
+        {
+            try
+            {
+                using var cn = DatabaseHelper.GetConnection();
+                using var cmd = new SqlCommand("SELECT TongDoanhThu FROM DOANH_THU WHERE Ngay = @ngay", cn);
+                cmd.Parameters.AddWithValue("@ngay", ngay.Date);
+                cn.Open();
+                var result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                    return Convert.ToDecimal(result);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            return 0;
+        }
+
+        public decimal GetDoanhThuThang(int m, int y)
+        {
+            try
+            {
+                using var cn = DatabaseHelper.GetConnection();
+                using var cmd = new SqlCommand("SELECT SUM(TongDoanhThu) FROM DOANH_THU WHERE MONTH(Ngay) = @m AND YEAR(Ngay) = @y", cn);
+                cmd.Parameters.AddWithValue("@m", m);
+                cmd.Parameters.AddWithValue("@y", y);
+                cn.Open();
+                var result = cmd.ExecuteScalar();
+                if (result != null && result != DBNull.Value)
+                    return Convert.ToDecimal(result);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            return 0;
+        }
     }
 }

@@ -15,17 +15,14 @@ namespace Quanlybanhang.ViewModels
         {
             var hoaDonDao = new HoaDonDAO();
             var prodDao = new ProductDAO();
+            var dtDao = new DoanhThuDAO();
 
+            // Lấy trực tiếp từ Database DOANH_THU thay vì RAM
+            DoanhThuNgay = dtDao.GetDoanhThuNgay(DateTime.Today);
+            DoanhThuThang = dtDao.GetDoanhThuThang(DateTime.Now.Month, DateTime.Now.Year);
+
+            // Số SP bán được lấy từ RAM HoaDonDAO tạm, lý tưởng nên đếm CTHoaDon trong DB
             var hoaDons = hoaDonDao.GetAll();
-
-            DoanhThuNgay = hoaDons
-                .Where(h => h.NgayLap.Date == DateTime.Today)
-                .Sum(h => h.TongTien);
-
-            DoanhThuThang = hoaDons
-                .Where(h => h.NgayLap.Month == DateTime.Now.Month && h.NgayLap.Year == DateTime.Now.Year)
-                .Sum(h => h.TongTien);
-
             SoSanPhamBan = hoaDons.Sum(h => h.ChiTiet.Sum(ct => ct.SoLuong));
 
             TonKho = prodDao.GetAllProducts()
