@@ -16,19 +16,19 @@
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="10" HorizontalAlignment="Left">
             <Button Content="Bán Hàng / Xuất Hoá Đơn" Margin="0,0,10,0" Padding="12,6" Background="#2196F3" Foreground="White" FontWeight="Bold" Cursor="Hand" Click="ShowBanHang_Click" />
             <Button Content="Quản lý Sản phẩm" Margin="0,0,10,0" Padding="8,4" Click="ShowProducts_Click" />
-            <Button Content="Quản lý Khách hàng" Margin="0,0,10,0" Padding="8,4" Click="ShowKhachHang_Click" />
-            <Button Content="Thống kê doanh thu" Padding="8,4" Click="ShowThongKe_Click" />
+            <Button x:Name="btnKhachHang" Content="Quản lý Khách hàng" Margin="0,0,10,0" Padding="8,4" Click="ShowKhachHang_Click" />
+            <Button x:Name="btnThongKe" Content="Thống kê doanh thu" Padding="8,4" Click="ShowThongKe_Click" />
         </StackPanel>
 
         <!-- Nền App và bố cục chia 2 cột -->
         <Grid x:Name="ProductsGrid" Background="#f0f2f5">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" /> <!-- Cột bên trái: Thêm sản phẩm -->
+            <ColumnDefinition x:Name="leftColumn" Width="300" /> <!-- Cột bên trái: Thêm sản phẩm -->
             <ColumnDefinition Width="*" />   <!-- Cột bên phải: Danh sách -->
         </Grid.ColumnDefinitions>
 
         <!-- PANEL BÊN TRÁI: Form Thêm mới -->
-        <Border Grid.Column="0" Background="White" Margin="10" Padding="15" CornerRadius="8" BorderBrush="#e0e0e0" BorderThickness="1">
+        <Border x:Name="btnAddProductPanel" Grid.Column="0" Background="White" Margin="10" Padding="15" CornerRadius="8" BorderBrush="#e0e0e0" BorderThickness="1">
             <StackPanel>
                 <TextBlock Text="NHẬP HÀNG MỚI" FontSize="18" FontWeight="Bold" Foreground="#333" Margin="0,0,0,15" HorizontalAlignment="Center"/>
 
@@ -91,7 +91,7 @@
                         <DataGridTextColumn Header="Tình trạng" Binding="{Binding Condition}" Width="150"/>
                         
                         <!-- Cột chứa Nút Xóa -->
-                        <DataGridTemplateColumn Header="Hành động" Width="80">
+                        <DataGridTemplateColumn x:Name="colDelete" Header="Hành động" Width="80">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Content="Xóa" 

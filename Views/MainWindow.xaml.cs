@@ -21,11 +21,25 @@ namespace Quanlybanhang.Views
 
             if (role == "admin")
             {
-                MessageBox.Show("Bạn là ADMIN");
+                MessageBox.Show("Bạn đăng nhập với quyền: NHÀ QUẢN TRỊ (ADMIN)", "Quyền truy cập", MessageBoxButton.OK, MessageBoxImage.Information);
+                
+                // Hiển thị toàn quyền
+                btnKhachHang.Visibility = Visibility.Visible;
+                btnThongKe.Visibility = Visibility.Visible;
+                btnAddProductPanel.Visibility = Visibility.Visible;
+                colDelete.Visibility = Visibility.Visible;
+                leftColumn.Width = new GridLength(300);
             }
             else
             {
-                MessageBox.Show("Bạn là NHÂN VIÊN");
+                MessageBox.Show("Bạn đăng nhập với quyền: NHÂN VIÊN\n(Một số chức năng bị giới hạn)", "Quyền truy cập", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                // Ẩn quyền Admin
+                btnKhachHang.Visibility = Visibility.Collapsed;
+                btnThongKe.Visibility = Visibility.Collapsed;
+                btnAddProductPanel.Visibility = Visibility.Collapsed;
+                colDelete.Visibility = Visibility.Collapsed;
+                leftColumn.Width = GridLength.Auto;
             }
         }
 
