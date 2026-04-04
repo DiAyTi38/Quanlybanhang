@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\New folder (5)\\Quanlybanhang.csproj": {}
+    "D:\\New folder (9)\\Quanlybanhang.csproj": {}
   },
   "projects": {
-    "D:\\New folder (5)\\Quanlybanhang.csproj": {
+    "D:\\New folder (9)\\Quanlybanhang.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\New folder (5)\\Quanlybanhang.csproj",
+        "projectUniqueName": "D:\\New folder (9)\\Quanlybanhang.csproj",
         "projectName": "Quanlybanhang",
-        "projectPath": "D:\\New folder (5)\\Quanlybanhang.csproj",
+        "projectPath": "D:\\New folder (9)\\Quanlybanhang.csproj",
         "packagesPath": "C:\\Users\\trinh\\.nuget\\packages\\",
-        "outputPath": "D:\\New folder (5)\\obj\\",
+        "outputPath": "D:\\New folder (9)\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\trinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -52,7 +52,7 @@ namespace Quanlybanhang.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Quanlybanhang;V1.0.0.0;component/views/khachhangview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Quanlybanhang;component/views/khachhangview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\KhachHangView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
